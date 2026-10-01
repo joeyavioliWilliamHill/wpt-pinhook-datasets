@@ -1,0 +1,568 @@
+{
+  "acquired_utc_date": "2026-09-29",
+  "sources": [
+    {
+      "sale_code": "OBSMAR25",
+      "source_url": "https://obssales.com/catalog/#/142/results",
+      "raw_file": "raw/obs_march25_results.csv",
+      "raw_sha256": "7f9510abb238d66340e4a51d257c5d4b8205fce31ac2c70be003ada3071651af",
+      "raw_rows": 814,
+      "normalized_file": "work/obs_march25_full.csv"
+    },
+    {
+      "sale_code": "OBSSPR25",
+      "source_url": "https://obssales.com/catalog/#/144/results",
+      "raw_file": "raw/obs_spring25_results.csv",
+      "raw_sha256": "3aa8854c0e25334290b1ed9bad0fa19391064ffffb3756c466d197db5ec908f7",
+      "raw_rows": 1207,
+      "normalized_file": "work/obs_spring25_full.csv"
+    },
+    {
+      "sale_code": "OBSJUN25",
+      "source_url": "https://obssales.com/catalog/#/145/results",
+      "raw_file": "raw/obs_june25_results.csv",
+      "raw_sha256": "3cb4373021276af2957f1a160c1b72d788dfe4b0f1d1f9eddd60cccb849832d8",
+      "raw_rows": 856,
+      "normalized_file": "work/obs_june25_full.csv"
+    },
+    {
+      "sale_code": "FTKYOCT24",
+      "source_url": "https://www.fasigtipton.com/2024/Kentucky-October-Yearlings?section=7360",
+      "raw_file": "raw/ft_ky_oct24_results.csv",
+      "raw_sha256": "5b543381630b556f9aa050c930737332ba2525cf5c492c2bfbb581c1eb072949",
+      "raw_rows": 1614,
+      "normalized_file": "work/ft_ky_oct24_full.csv"
+    },
+    {
+      "sale_code": "FTSAR24",
+      "source_url": "https://www.fasigtipton.com/2024/The-Saratoga-Sale?section=7307",
+      "raw_file": "raw/ft_saratoga24_results.csv",
+      "raw_sha256": "d4dd2ba44efe77da132a795d4e820acbdf128dd9200d96936e23e65f77d19c71",
+      "raw_rows": 237,
+      "normalized_file": "work/ft_saratoga24_full.csv"
+    },
+    {
+      "sale_code": "FTNYB24",
+      "source_url": "https://www.fasigtipton.com/2024/NY-Bred-Yearlings?section=7308",
+      "raw_file": "raw/ft_nybred24_results.csv",
+      "raw_sha256": "134ca422d397943cc7f7ed02538d2ae5d88641773db8e3721dc121fc728b367e",
+      "raw_rows": 296,
+      "normalized_file": "work/ft_nybred24_full.csv"
+    },
+    {
+      "sale_code": "FTJUL24",
+      "source_url": "https://www.fasigtipton.com/2024/The-July-Sale?section=7268",
+      "raw_file": "raw/ft_july24_results.csv",
+      "raw_sha256": "35f07352db25f2a182379313973f2f2a6ff0a4216a14ead2e06081f2b458b5bf",
+      "raw_rows": 281,
+      "normalized_file": "work/ft_july24_full.csv"
+    },
+    {
+      "sale_code": "KEESEP23",
+      "source_url": "https://flex.keeneland.com/summaries/summaries.html",
+      "raw_file": "raw/kee_sep23_results.csv",
+      "raw_sha256": "36897f99331bdf6533472c086b39af57c981f10e0addb7ad4f85f2441f5d3520",
+      "raw_rows": 4198,
+      "normalized_file": "work/kee_sep23_full.csv"
+    },
+    {
+      "sale_code": "FTKYOCT23",
+      "source_url": "https://www.fasigtipton.com/2023/Kentucky-October-Yearlings?section=6818",
+      "raw_file": "raw/ft_ky_oct23_results.csv",
+      "raw_sha256": "e134e99117ea32f8e60404f5c1fba7e96509b5bdef1349151fb9512375aae044",
+      "raw_rows": 1602,
+      "normalized_file": "work/ft_ky_oct23_full.csv"
+    },
+    {
+      "sale_code": "OBSMAR24",
+      "source_url": "https://obssales.com/catalog/#/135/results",
+      "raw_file": "raw/obs_march24_results.csv",
+      "raw_sha256": "6f79b16924793b2332d2b7401a53355bc20e3aadc539d1793a982f08c75ea6d6",
+      "raw_rows": 853,
+      "normalized_file": "work/obs_march24_full.csv"
+    },
+    {
+      "sale_code": "OBSSPR24",
+      "source_url": "https://obssales.com/catalog/#/136/results",
+      "raw_file": "raw/obs_spring24_results.csv",
+      "raw_sha256": "800b74ffd0fae8e5f105fb22d7e407b1b3a0ad0904a8dc6026cff7d2004a62ce",
+      "raw_rows": 1208,
+      "normalized_file": "work/obs_spring24_full.csv"
+    },
+    {
+      "sale_code": "OBSJUN24",
+      "source_url": "https://obssales.com/catalog/#/137/results",
+      "raw_file": "raw/obs_june24_results.csv",
+      "raw_sha256": "87822c17c47a7bb53eed43963055fd2563aaa6e0c5032b224b821c6baebdb318",
+      "raw_rows": 1042,
+      "normalized_file": "work/obs_june24_full.csv"
+    },
+    {
+      "sale_code": "FTMMAY24",
+      "source_url": "https://fasigtipton.com/2024/Midlantic-May-2YO-Sale?section=7231",
+      "raw_file": "raw/ft_may24_results.csv",
+      "raw_sha256": "9ef67d0f4cc27590220f96247095b43df7d118ffa11a483f9a131f6834425e72",
+      "raw_rows": 580,
+      "normalized_file": "work/ft_may24_full.csv"
+    },
+    {
+      "sale_code": "KEESEP22",
+      "source_url": "https://flex.keeneland.com/summaries/summaries.html",
+      "raw_file": "raw/kee_sep22_results.csv",
+      "raw_sha256": "c63f864fdbc565523045ff10422ed4857ac142f0fb51389f5657069baa33a508",
+      "raw_rows": 4153,
+      "normalized_file": "work/kee_sep22_full.csv"
+    },
+    {
+      "sale_code": "FTKYOCT22",
+      "source_url": "https://www.fasigtipton.com/2022/Kentucky-October-Yearlings?section=6260",
+      "raw_file": "raw/ft_ky_oct22_results.csv",
+      "raw_sha256": "d79b830bac819a8fbe1e4514a68030062308fd175fb361369e350866dd85e5c9",
+      "raw_rows": 1594,
+      "normalized_file": "work/ft_ky_oct22_full.csv"
+    },
+    {
+      "sale_code": "FTMMAY23",
+      "source_url": "https://www.fasigtipton.com/2023/Midlantic-May-2YO-Sale?section=6688",
+      "raw_file": "raw/ft_may23_results.csv",
+      "raw_sha256": "bbdd2b3d2143fee543f4c488c10e1e6a2fee69db8e095e74332b0c3b0788dda6",
+      "raw_rows": 598,
+      "normalized_file": "work/ft_may23_full.csv"
+    },
+    {
+      "sale_code": "OBSMAR23",
+      "source_url": "https://obscatalog.com/marresults/2023/",
+      "raw_file": "raw/obs_march23_results.xls",
+      "raw_sha256": "afbc62bcfddcc6b2b1009d3e264b642b15acb094da5a8f61fc40e3416c16983a",
+      "raw_rows": null,
+      "normalized_file": "work/obs_march23_full.csv"
+    },
+    {
+      "sale_code": "OBSSPR23",
+      "source_url": "https://obscatalog.com/aprresults/2023/",
+      "raw_file": "raw/obs_spring23_results.xls",
+      "raw_sha256": "e22e9dcf45cae5afce2dc7896dd9c74dca87d342aba5daacf433244dba5e4197",
+      "raw_rows": null,
+      "normalized_file": "work/obs_spring23_full.csv"
+    },
+    {
+      "sale_code": "OBSJUN23",
+      "source_url": "https://obscatalog.com/junresults/2023/",
+      "raw_file": "raw/obs_june23_results.xls",
+      "raw_sha256": "28d79f362fc4cbacbb6bcfa0fb757a5c05cc2beb10966f7a19c0750b156ee8fc",
+      "raw_rows": null,
+      "normalized_file": "work/obs_june23_full.csv"
+    },
+    {
+      "sale_code": "FTJUL22",
+      "source_url": "https://www.fasigtipton.com/2022/The-July-Sale",
+      "raw_file": "raw/ft_july22_results.csv",
+      "raw_sha256": "c0db8490902e64a047320648395ffddf93b2954c3258ff1e1c3b633c1960b8c9",
+      "raw_rows": 298,
+      "normalized_file": "work/ft_july22_full.csv"
+    },
+    {
+      "sale_code": "FTNYB22",
+      "source_url": "https://www.fasigtipton.com/2022/New-York-Bred-Yearlings",
+      "raw_file": "raw/ft_nybred22_results.csv",
+      "raw_sha256": "ffc08e0e49addf76d5ebe80a9ed0b3b30f8deb22f74808410d2ddee083c56065",
+      "raw_rows": 280,
+      "normalized_file": "work/ft_nybred22_full.csv"
+    },
+    {
+      "sale_code": "FTSAR22",
+      "source_url": "https://www.fasigtipton.com/2022/The-Saratoga-Sale",
+      "raw_file": "raw/ft_saratoga22_results.csv",
+      "raw_sha256": "ba8fed8b7f7233a4784449bfca0388e1b2fac99e3d941bbf479c837558d65c2a",
+      "raw_rows": 214,
+      "normalized_file": "work/ft_saratoga22_full.csv"
+    },
+    {
+      "sale_code": "FTJUL23",
+      "source_url": "https://www.fasigtipton.com/2023/The-July-Sale",
+      "raw_file": "raw/ft_july23_results.csv",
+      "raw_sha256": "60a772400465a851cfd21baa75be807246efd95c9994d4b80f09510ded20bccb",
+      "raw_rows": 369,
+      "normalized_file": "work/ft_july23_full.csv"
+    },
+    {
+      "sale_code": "FTNYB23",
+      "source_url": "https://www.fasigtipton.com/2023/NY-Bred-Yearlings",
+      "raw_file": "raw/ft_nybred23_results.csv",
+      "raw_sha256": "71b9464219116e54c4d9be93fccd1a50726ecfdbda1492086d458cf17f5241c6",
+      "raw_rows": 363,
+      "normalized_file": "work/ft_nybred23_full.csv"
+    },
+    {
+      "sale_code": "FTSAR23",
+      "source_url": "https://www.fasigtipton.com/2023/The-Saratoga-Sale",
+      "raw_file": "raw/ft_saratoga23_results.csv",
+      "raw_sha256": "efb49e0dd5367c8514b013652b2d53a938ed46f95e76c39f58d4f1428454f9a5",
+      "raw_rows": 230,
+      "normalized_file": "work/ft_saratoga23_full.csv"
+    }
+  ],
+  "files": {
+    "README_DATASET.md": {
+      "sha256": "220c261b98334f6c0d01963d7bac04684fa925cbd24167aebd432801a2d6065a",
+      "bytes": 3487
+    },
+    "explore_dataset.py": {
+      "sha256": "911f44bcf0d34f5cf375bc98603609350a144ed8959a517e910e2fcbd0547311",
+      "bytes": 5828
+    },
+    "pinhook/__init__.py": {
+      "sha256": "20c8e430ededc2143396e553a3c67aac4ec483ef54efdfcb18a31cb162ca0646",
+      "bytes": 22
+    },
+    "pinhook/build_cohort_year.py": {
+      "sha256": "059f1256f97d7673e2c1e817674dc4abe919d68561ce2326714a0e9e94d09bf4",
+      "bytes": 3448
+    },
+    "pinhook/cli.py": {
+      "sha256": "5a1989ded4d3365697f8d557c3a3416870f41b83952b6517e19e7df8a198300c",
+      "bytes": 4694
+    },
+    "pinhook/core.py": {
+      "sha256": "853a5471c0b2fc6a130ce7d38decb05bb9da635e62344db532693afd70d3eef6",
+      "bytes": 8848
+    },
+    "pinhook/fasig_results.py": {
+      "sha256": "e3197c46dab78df2f05161fd98e69b3333ce9b31a6cbe6836479c15db4b4c026",
+      "bytes": 3176
+    },
+    "pinhook/keeneland_catalog.py": {
+      "sha256": "0384e2e8bfeb59beddddf4111eea01130a103fc75c070918a2ce89f70964a456",
+      "bytes": 5651
+    },
+    "pinhook/keeneland_results.py": {
+      "sha256": "52f78b7195a8f9ac24c83f39dd804e58c0f83c124099756e425d9444f3bd0e0f",
+      "bytes": 4000
+    },
+    "pinhook/match_audit.py": {
+      "sha256": "2107d31acc7a2b41d7f316b9a7585d296b0250f492ea52531056e4cc73b1847a",
+      "bytes": 4004
+    },
+    "pinhook/multi_sale_cohort.py": {
+      "sha256": "51d81de8d7bd6c99f052f59680e1478afbba375fd0259cf8b9b99be86d603be1",
+      "bytes": 5548
+    },
+    "pinhook/obs_legacy_excel.py": {
+      "sha256": "cf9af9a4ab6a991823cc119cade46b9576fd531399792db203e6945260369fd0",
+      "bytes": 4134
+    },
+    "pinhook/obs_results.py": {
+      "sha256": "db6a27aeb3b822a0c92c7c33c5f4f9bedaa32df513f7712720dae3c7337652f6",
+      "bytes": 4468
+    },
+    "pinhook/pdf_catalog.py": {
+      "sha256": "8db089f68d6228795dbd792b99ae452ec33021bfead981dbcae763f4f4051a52",
+      "bytes": 5875
+    },
+    "pinhook/provisional_cohort.py": {
+      "sha256": "10f9f232c445a8fa51cd238429710434a86f0900db53439ae5302af52ef73dc5",
+      "bytes": 3455
+    },
+    "pinhook/rebuild_historical.py": {
+      "sha256": "8d5c585498d6e052a2abc2eb50ad27f500e950a7ec599810b71f0448e100558d",
+      "bytes": 2917
+    },
+    "pyproject.toml": {
+      "sha256": "bd9023bcdfb8d8d823679a43e182ac1cff257c1d40e6f10cb4765694554c17cf",
+      "bytes": 373
+    },
+    "raw/ft_july22_results.csv": {
+      "sha256": "c0db8490902e64a047320648395ffddf93b2954c3258ff1e1c3b633c1960b8c9",
+      "bytes": 52607
+    },
+    "raw/ft_july23_results.csv": {
+      "sha256": "60a772400465a851cfd21baa75be807246efd95c9994d4b80f09510ded20bccb",
+      "bytes": 56811
+    },
+    "raw/ft_july24_results.csv": {
+      "sha256": "35f07352db25f2a182379313973f2f2a6ff0a4216a14ead2e06081f2b458b5bf",
+      "bytes": 43180
+    },
+    "raw/ft_ky_oct22_results.csv": {
+      "sha256": "d79b830bac819a8fbe1e4514a68030062308fd175fb361369e350866dd85e5c9",
+      "bytes": 268919
+    },
+    "raw/ft_ky_oct23_results.csv": {
+      "sha256": "e134e99117ea32f8e60404f5c1fba7e96509b5bdef1349151fb9512375aae044",
+      "bytes": 268775
+    },
+    "raw/ft_ky_oct24_results.csv": {
+      "sha256": "5b543381630b556f9aa050c930737332ba2525cf5c492c2bfbb581c1eb072949",
+      "bytes": 331552
+    },
+    "raw/ft_may23_results.csv": {
+      "sha256": "bbdd2b3d2143fee543f4c488c10e1e6a2fee69db8e095e74332b0c3b0788dda6",
+      "bytes": 136739
+    },
+    "raw/ft_may24_results.csv": {
+      "sha256": "9ef67d0f4cc27590220f96247095b43df7d118ffa11a483f9a131f6834425e72",
+      "bytes": 133337
+    },
+    "raw/ft_may25_results.csv": {
+      "sha256": "e952238254a0a6b11d2071a57e4fc75eed572392630ce1101bc367548edb0aea",
+      "bytes": 144930
+    },
+    "raw/ft_nybred22_results.csv": {
+      "sha256": "ffc08e0e49addf76d5ebe80a9ed0b3b30f8deb22f74808410d2ddee083c56065",
+      "bytes": 47522
+    },
+    "raw/ft_nybred23_results.csv": {
+      "sha256": "71b9464219116e54c4d9be93fccd1a50726ecfdbda1492086d458cf17f5241c6",
+      "bytes": 61032
+    },
+    "raw/ft_nybred24_results.csv": {
+      "sha256": "134ca422d397943cc7f7ed02538d2ae5d88641773db8e3721dc121fc728b367e",
+      "bytes": 62424
+    },
+    "raw/ft_saratoga22_results.csv": {
+      "sha256": "ba8fed8b7f7233a4784449bfca0388e1b2fac99e3d941bbf479c837558d65c2a",
+      "bytes": 35508
+    },
+    "raw/ft_saratoga23_results.csv": {
+      "sha256": "efb49e0dd5367c8514b013652b2d53a938ed46f95e76c39f58d4f1428454f9a5",
+      "bytes": 38383
+    },
+    "raw/ft_saratoga24_results.csv": {
+      "sha256": "d4dd2ba44efe77da132a795d4e820acbdf128dd9200d96936e23e65f77d19c71",
+      "bytes": 44269
+    },
+    "raw/kee_sep22_results.csv": {
+      "sha256": "c63f864fdbc565523045ff10422ed4857ac142f0fb51389f5657069baa33a508",
+      "bytes": 642875
+    },
+    "raw/kee_sep23_results.csv": {
+      "sha256": "36897f99331bdf6533472c086b39af57c981f10e0addb7ad4f85f2441f5d3520",
+      "bytes": 642987
+    },
+    "raw/kee_sep24_results.csv": {
+      "sha256": "b46ce580d6b06fd4d02a74207876777039d4074fddc694e5b2aa4f7332bffbda",
+      "bytes": 674115
+    },
+    "raw/obs_june23_results.xls": {
+      "sha256": "28d79f362fc4cbacbb6bcfa0fb757a5c05cc2beb10966f7a19c0750b156ee8fc",
+      "bytes": 404480
+    },
+    "raw/obs_june24_results.csv": {
+      "sha256": "87822c17c47a7bb53eed43963055fd2563aaa6e0c5032b224b821c6baebdb318",
+      "bytes": 182149
+    },
+    "raw/obs_june25_results.csv": {
+      "sha256": "3cb4373021276af2957f1a160c1b72d788dfe4b0f1d1f9eddd60cccb849832d8",
+      "bytes": 149795
+    },
+    "raw/obs_march23_results.xls": {
+      "sha256": "afbc62bcfddcc6b2b1009d3e264b642b15acb094da5a8f61fc40e3416c16983a",
+      "bytes": 320512
+    },
+    "raw/obs_march24_results.csv": {
+      "sha256": "6f79b16924793b2332d2b7401a53355bc20e3aadc539d1793a982f08c75ea6d6",
+      "bytes": 152052
+    },
+    "raw/obs_march25_results.csv": {
+      "sha256": "7f9510abb238d66340e4a51d257c5d4b8205fce31ac2c70be003ada3071651af",
+      "bytes": 140539
+    },
+    "raw/obs_spring23_results.xls": {
+      "sha256": "e22e9dcf45cae5afce2dc7896dd9c74dca87d342aba5daacf433244dba5e4197",
+      "bytes": 432128
+    },
+    "raw/obs_spring24_results.csv": {
+      "sha256": "800b74ffd0fae8e5f105fb22d7e407b1b3a0ad0904a8dc6026cff7d2004a62ce",
+      "bytes": 212811
+    },
+    "raw/obs_spring25_results.csv": {
+      "sha256": "3aa8854c0e25334290b1ed9bad0fa19391064ffffb3756c466d197db5ec908f7",
+      "bytes": 211989
+    },
+    "sql/schema.sql": {
+      "sha256": "b35b6c3ec9fba4b089517604f939eb0f31505a1bc7d8da3f359b1a31aa0838db",
+      "bytes": 5368
+    },
+    "tests/test_candidate_flags.py": {
+      "sha256": "449bfd3c8b01f6ee716b051d83ae2c139966d4a42134c072bd51594295ff2477",
+      "bytes": 2224
+    },
+    "work/cohort_2022_2024_yearlings_to_2023_2025_juveniles_by_purchase.csv": {
+      "sha256": "b31744d3cc415f14c58922ed9004270b276bace01042209df904bcc0982856fd",
+      "bytes": 3662489
+    },
+    "work/cohort_2022_to_2023_by_purchase.csv": {
+      "sha256": "84e1ef99e4eb12b197d0bf35a6fe0fc90d2d892bb3074d90413237219f329b03",
+      "bytes": 1242206
+    },
+    "work/cohort_2023_to_2024_by_purchase.csv": {
+      "sha256": "aa98595b8f49b2b7d77a4a4f3f264803cc04e724c0516d9dfe138df6e2fa6b1b",
+      "bytes": 1221335
+    },
+    "work/cohort_2024_to_2025_by_purchase.csv": {
+      "sha256": "76505c41f75634ce521a2f60745a4d01c8c3ddf4bd17aaf9e08e74d9a0516c45",
+      "bytes": 1200052
+    },
+    "work/coverage_summary_three_cohorts.csv": {
+      "sha256": "cdfd0af863f91e3b8673e1a76efb294b5a4c3dd603803945ca021ab78ef775c3",
+      "bytes": 1340
+    },
+    "work/five_yearling22_four_juvenile23_candidates.csv": {
+      "sha256": "41aadc9d9979bcc0d45d890196898731c297e887da71165002eeda47d94a7163",
+      "bytes": 1164983
+    },
+    "work/five_yearling22_four_juvenile23_metrics.json": {
+      "sha256": "510c8cc3dc6a29fade4489e1e5320c5b806241cffb96125da8333bc8a1131f64",
+      "bytes": 1502
+    },
+    "work/five_yearling23_four_juvenile24_candidates.csv": {
+      "sha256": "117b6eee8c9df0cc6df14c1cd94a47d84b3bdcf42fb710895f97106875068988",
+      "bytes": 1178358
+    },
+    "work/five_yearling23_four_juvenile24_metrics.json": {
+      "sha256": "f3fc2701e5bb2cd87a860574246336981d7d8536df671ce4c5afdaa42d2957c9",
+      "bytes": 1503
+    },
+    "work/five_yearling_four_juvenile_candidates.csv": {
+      "sha256": "dd03e4a652ae754d100ca40b8b0959b1673bc32d00c4d13a4ee5e701e947b523",
+      "bytes": 1174683
+    },
+    "work/five_yearling_four_juvenile_metrics.json": {
+      "sha256": "62d62b488768adc6e26e68a3d4721ce4a843cb0d47ab989f00c2933a0aa44a0a",
+      "bytes": 1501
+    },
+    "work/ft_july22_full.csv": {
+      "sha256": "5a3d1549a6c568e23d8c1f882f109f22f303f6a85e5686ef369502cec391d2c2",
+      "bytes": 93841
+    },
+    "work/ft_july23_full.csv": {
+      "sha256": "92b85fb628c4dc957e924d06b43c3b8e8876494c8a6be277367888d3c87d657b",
+      "bytes": 115305
+    },
+    "work/ft_july24_full.csv": {
+      "sha256": "d1fb7818ae416a29e39dcd32a9a9e7f1171f2e5530320cdfd3dd5db684c6d4fb",
+      "bytes": 91466
+    },
+    "work/ft_ky_oct22_full.csv": {
+      "sha256": "b08a52897c450fb836d0f79413f80bea8c2e018085d69ed5e935f8cb5dc199ee",
+      "bytes": 551094
+    },
+    "work/ft_ky_oct23_full.csv": {
+      "sha256": "7edf604515431ab6b631113049b79357236c182ccf1337be347c55ce95fb054d",
+      "bytes": 551503
+    },
+    "work/ft_ky_oct24_full.csv": {
+      "sha256": "15920bd98de3e65dd17614b36943f915cbe71016b16ec8c2ce18655999d3e5f1",
+      "bytes": 557684
+    },
+    "work/ft_may23_full.csv": {
+      "sha256": "070f1969d5598934761992c8510a7998c788e1c49bd0e0450f5b9574f8764733",
+      "bytes": 202049
+    },
+    "work/ft_may24_full.csv": {
+      "sha256": "9cb93810e7ea3390ad90ef93459087a6ae59b1f0f0e2c3c345a4a9a2e856125c",
+      "bytes": 191529
+    },
+    "work/ft_may25_results_full.csv": {
+      "sha256": "3078619e8c7948cd268661e08177d8ba00fcb38dbe29c2fccc0411286a138c3b",
+      "bytes": 195959
+    },
+    "work/ft_nybred22_full.csv": {
+      "sha256": "d2c34efba8f9f59becf84fe4897033afc31d15b8238e94332022aaa2bd1a8fd1",
+      "bytes": 92202
+    },
+    "work/ft_nybred23_full.csv": {
+      "sha256": "605c2fdc33a7733bbb61af747a3d7cb511765ecd1c5d92b1cb92b3c3cf09fcd6",
+      "bytes": 116659
+    },
+    "work/ft_nybred24_full.csv": {
+      "sha256": "511bf9f49c74e943ce7c14ac26b4422ede2bdbc862622380f3ba15bcbdd85e5a",
+      "bytes": 99232
+    },
+    "work/ft_saratoga22_full.csv": {
+      "sha256": "b384d62f9930e223d7487e7ed566ee05e1a9f5edaae360bffb60cff17fd40a00",
+      "bytes": 69682
+    },
+    "work/ft_saratoga23_full.csv": {
+      "sha256": "2ff012eb3f13bd70de555def36a4bd54a6757c779c15e5b517eb1da9e044e030",
+      "bytes": 74980
+    },
+    "work/ft_saratoga24_full.csv": {
+      "sha256": "ce62df306d66d2ea19b0c0f95a1588a938b48aedfc39b519bf3abdeb337d53b1",
+      "bytes": 80167
+    },
+    "work/juvenile_2023_four_sales.csv": {
+      "sha256": "e4cad4401e73abad04b43a58cb3fbfb58521699c43aa677fed7f9c5bfd460543",
+      "bytes": 1130918
+    },
+    "work/juvenile_2024_four_sales.csv": {
+      "sha256": "927a2ac355cfb50481d346fd03f793c4511534ab9b9b091d936d7c6693e6e98a",
+      "bytes": 1091964
+    },
+    "work/juvenile_2025_four_sales.csv": {
+      "sha256": "9f2e8c17e89f2364b61e13c7352eda4cf422eac3249aaa5bd1e53c8b1fed7596",
+      "bytes": 1030725
+    },
+    "work/kee_sep22_full.csv": {
+      "sha256": "4b6cbf1b2b80eee5ff384c0d6fff602ebfe217e771cf9983ac344a8821559ec0",
+      "bytes": 1307598
+    },
+    "work/kee_sep23_full.csv": {
+      "sha256": "238efc421ad6a3b0dfe087056a1b9af44f0db8a9abc335f288a5d18357c249ec",
+      "bytes": 1313734
+    },
+    "work/kee_sep24_full.csv": {
+      "sha256": "516e27ef85e9673fe352b6de6b6ff16066ceebde7eb97d8d1f0c146d6fc45dab",
+      "bytes": 1376344
+    },
+    "work/obs_june23_full.csv": {
+      "sha256": "ecc02231dab677d7bfdc48968046c07ffba183c58674599adb98585c00a14143",
+      "bytes": 318415
+    },
+    "work/obs_june24_full.csv": {
+      "sha256": "db9ce7b11f0d09c2efbe500cd3810e0dd3fdc5d9f89940ad5b21243851ec39ee",
+      "bytes": 297937
+    },
+    "work/obs_june25_full.csv": {
+      "sha256": "30e536e71727e159e22fbc1c30d492a8fe61f8c2e7b69bedc52d4ab58d3f1545",
+      "bytes": 247209
+    },
+    "work/obs_march23_full.csv": {
+      "sha256": "ffb58a4b2345152a2004a81fa3a8ca10d5d6e61834e8c2f2f3861b6cc18989b2",
+      "bytes": 246063
+    },
+    "work/obs_march24_full.csv": {
+      "sha256": "fb26c2d8f91b95d5c63e73fc9f5e57a759f0db6ed0f5481fd71cc9e7a45e8986",
+      "bytes": 249645
+    },
+    "work/obs_march25_full.csv": {
+      "sha256": "7b552627183cc1806b1e6f5ac20805ad4bcdb306eb5d575fbfcc4c4e45c6c61e",
+      "bytes": 236136
+    },
+    "work/obs_spring23_full.csv": {
+      "sha256": "42c66bd56a47666da33e53e8a0b7dc7da08f4ffd418211d99dbe2f303633d911",
+      "bytes": 365099
+    },
+    "work/obs_spring24_full.csv": {
+      "sha256": "2d44d94f910493a5139077305c7b56345e84ee24d0d95ae895eaa16e1e7c3a07",
+      "bytes": 353561
+    },
+    "work/obs_spring25_full.csv": {
+      "sha256": "2e6ae28cb731235f5d79ce9dd898760ed62bf6ca5323bab038ad03232a30c971",
+      "bytes": 352129
+    },
+    "work/yearling_2022_five_sales.csv": {
+      "sha256": "23aafbb7276631a6754c483926bde16bb64061d324f74706241a5bf3fdfa2b14",
+      "bytes": 2113473
+    },
+    "work/yearling_2023_five_sales.csv": {
+      "sha256": "0647ba70ba36cbff928a405eeea4fa13f14667f2330b1598920cbd337d5066a1",
+      "bytes": 2171237
+    },
+    "work/yearling_2024_five_sales.csv": {
+      "sha256": "40911d204a8925df5d91c796a2b7547fe0b75b79fffda38582a1c4981bb2fe8c",
+      "bytes": 2203949
+    }
+  },
+  "rebuilt_utc_date": "2026-09-30"
+}

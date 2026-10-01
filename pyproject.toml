@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pinhook-data"
+version = "0.1.0"
+description = "Auditable Thoroughbred yearling-to-juvenile sale crosswalk"
+requires-python = ">=3.11"
+dependencies = ["xlrd>=2.0.1", "openpyxl>=3.1"]
+
+[project.optional-dependencies]
+pdf = ["pypdf>=6", "fonttools>=4"]
+
+[project.scripts]
+pinhook = "pinhook.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pinhook*"]

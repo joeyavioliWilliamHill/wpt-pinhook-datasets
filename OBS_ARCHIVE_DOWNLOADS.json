@@ -1,0 +1,229 @@
+[
+  {
+    "sale": "march20",
+    "page": "https://obssales.com/blog/2020/01/31/the-2020-march-sale/",
+    "download_url": "https://www.obscatalog.com/OBSPAGES/Mar20_Excel.xls",
+    "save_as": "raw/obs_march20_results.xls",
+    "sessions": [
+      [
+        1,
+        340,
+        "2020-03-17"
+      ],
+      [
+        341,
+        681,
+        "2020-03-18"
+      ]
+    ]
+  },
+  {
+    "sale": "spring20",
+    "page": "https://obssales.com/blog/2020/03/30/2020-spring-sale-of-two-year-olds-in-training/",
+    "download_url": "https://www.obscatalog.com/OBSPAGES/Apr20_Excel.xls",
+    "save_as": "raw/obs_spring20_results.xls",
+    "sessions": [
+      [
+        1,
+        308,
+        "2020-06-09"
+      ],
+      [
+        309,
+        616,
+        "2020-06-10"
+      ],
+      [
+        617,
+        924,
+        "2020-06-11"
+      ],
+      [
+        925,
+        1231,
+        "2020-06-12"
+      ],
+      [
+        1233,
+        1252,
+        "2020-06-09"
+      ],
+      [
+        1253,
+        1272,
+        "2020-06-10"
+      ],
+      [
+        1273,
+        1292,
+        "2020-06-11"
+      ],
+      [
+        1293,
+        1315,
+        "2020-06-12"
+      ]
+    ]
+  },
+  {
+    "sale": "july20",
+    "page": "https://obssales.com/blog/2020/06/15/2020-july-two-year-olds-horses-of-racing-age/",
+    "download_url": "https://www.obscatalog.com/OBSPAGES/Jul20_Excel.xls",
+    "save_as": "raw/obs_july20_results.xls",
+    "sessions": [
+      [
+        1,
+        360,
+        "2020-07-14"
+      ],
+      [
+        361,
+        720,
+        "2020-07-15"
+      ],
+      [
+        721,
+        1114,
+        "2020-07-16"
+      ]
+    ]
+  },
+  {
+    "sale": "march21",
+    "page": "https://obssales.com/blog/2021/02/02/the-2021-march-sale/",
+    "download_url": "https://www.obscatalog.com/OBSPAGES/Mar21_Excel.xls",
+    "save_as": "raw/obs_march21_results.xls",
+    "sessions": [
+      [
+        1,
+        282,
+        "2021-03-16"
+      ],
+      [
+        283,
+        563,
+        "2021-03-17"
+      ]
+    ]
+  },
+  {
+    "sale": "spring21",
+    "page": "https://obssales.com/blog/2021/03/19/2021-spring-sale-of-two-year-olds-in-training/",
+    "download_url": "https://www.obscatalog.com/OBSPAGES/Apr21_Excel.xls",
+    "save_as": "raw/obs_spring21_results.xls",
+    "sessions": [
+      [
+        1,
+        304,
+        "2021-04-20"
+      ],
+      [
+        305,
+        608,
+        "2021-04-21"
+      ],
+      [
+        609,
+        912,
+        "2021-04-22"
+      ],
+      [
+        913,
+        1217,
+        "2021-04-23"
+      ]
+    ]
+  },
+  {
+    "sale": "june21",
+    "page": "https://obssales.com/blog/2021/04/27/2021-june-two-year-olds-horses-of-racing-age/",
+    "download_url": "https://www.obscatalog.com/OBSPAGES/Jun21_Excel.xls",
+    "save_as": "raw/obs_june21_results.xls",
+    "sessions": [
+      [
+        1,
+        316,
+        "2021-06-09"
+      ],
+      [
+        317,
+        632,
+        "2021-06-10"
+      ],
+      [
+        633,
+        927,
+        "2021-06-11"
+      ]
+    ]
+  },
+  {
+    "sale": "march22",
+    "page": "https://obssales.com/blog/2022/01/31/2022-march-sale/",
+    "download_url": "https://www.obscatalog.com/OBSPAGES/Mar22_Excel.xls",
+    "save_as": "raw/obs_march22_results.xls",
+    "sessions": [
+      [
+        1,
+        316,
+        "2022-03-15"
+      ],
+      [
+        317,
+        635,
+        "2022-03-16"
+      ]
+    ]
+  },
+  {
+    "sale": "spring22",
+    "page": "https://obssales.com/blog/2022/03/17/spring-sale-2022/",
+    "download_url": "https://www.obscatalog.com/OBSPAGES/Apr22_Excel.xlsx",
+    "save_as": "raw/obs_spring22_results.xlsx",
+    "sessions": [
+      [
+        1,
+        308,
+        "2022-04-19"
+      ],
+      [
+        309,
+        616,
+        "2022-04-20"
+      ],
+      [
+        617,
+        924,
+        "2022-04-21"
+      ],
+      [
+        925,
+        1231,
+        "2022-04-22"
+      ]
+    ]
+  },
+  {
+    "sale": "june22",
+    "page": "https://obssales.com/blog/2022/04/29/2022-june-two-year-olds-horses-of-racing-age/",
+    "download_url": "https://www.obscatalog.com/OBSPAGES/Jun22_Excel.xls",
+    "save_as": "raw/obs_june22_results.xls",
+    "sessions": [
+      [
+        1,
+        374,
+        "2022-06-07"
+      ],
+      [
+        375,
+        748,
+        "2022-06-08"
+      ],
+      [
+        749,
+        1114,
+        "2022-06-09"
+      ]
+    ]
+  }
+]

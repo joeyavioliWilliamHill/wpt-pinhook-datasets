@@ -1,4 +1,4 @@
-"""Normalize archived OBS 2023 results .xls exports (March, Spring, June).
+"""Normalize archived OBS 2020–2023 results .xls exports (March, Spring, June).
 
 The historical workbook stores an RNA bid in Buyer and 'Not Sold' in Price.
 Blank summary rows are excluded; raw workbooks remain unchanged.
@@ -15,6 +15,19 @@ from pathlib import Path
 from .core import ENTRY_FIELDS, validate_entries, write_csv
 
 SALES = {
+    'march20': ('OBSMAR20', 'https://obssales.com/blog/2020/01/31/the-2020-march-sale/',
+                [(1,340,'2020-03-17'),(341,681,'2020-03-18')]),
+    'spring20': ('OBSSPR20', 'https://obssales.com/blog/2020/03/30/2020-spring-sale-of-two-year-olds-in-training/',
+                 [(1,308,'2020-06-09'),(309,616,'2020-06-10'),(617,924,'2020-06-11'),(925,1231,'2020-06-12'),
+                  (1233,1252,'2020-06-09'),(1253,1272,'2020-06-10'),(1273,1292,'2020-06-11'),(1293,1315,'2020-06-12')]),
+    'july20': ('OBSJUL20', 'https://obssales.com/blog/2020/06/15/2020-july-two-year-olds-horses-of-racing-age/',
+               [(1,360,'2020-07-14'),(361,720,'2020-07-15'),(721,1114,'2020-07-16')]),
+    'march21': ('OBSMAR21', 'https://obssales.com/blog/2021/02/02/the-2021-march-sale/',
+                [(1,282,'2021-03-16'),(283,563,'2021-03-17')]),
+    'spring21': ('OBSSPR21', 'https://obssales.com/blog/2021/03/19/2021-spring-sale-of-two-year-olds-in-training/',
+                 [(1,304,'2021-04-20'),(305,608,'2021-04-21'),(609,912,'2021-04-22'),(913,1217,'2021-04-23')]),
+    'june21': ('OBSJUN21', 'https://obssales.com/blog/2021/04/27/2021-june-two-year-olds-horses-of-racing-age/',
+               [(1,316,'2021-06-09'),(317,632,'2021-06-10'),(633,927,'2021-06-11')]),
     'march22': ('OBSMAR22', 'https://obssales.com/blog/2022/01/31/2022-march-sale/',
                 [(1, 316, '2022-03-15'), (317, 635, '2022-03-16')]),
     'spring22': ('OBSSPR22', 'https://obssales.com/blog/2022/03/17/spring-sale-2022/',
@@ -73,7 +86,9 @@ def normalize(path, sale):
             continue
         hip = int(r[0])
         if not r[5] or not r[6] or (sale == 'june23' and (1018 <= hip <= 1029 or hip == 1084)) \
-           or (sale == 'june22' and hip >= 1151):
+           or (sale == 'june22' and hip >= 1151) \
+           or (sale == 'june21' and 860 <= hip <= 879) \
+           or (sale == 'july20' and 993 <= hip <= 1005):
             excluded.append(hip)
             continue
         day = next((d for lo, hi, d in sessions if lo <= hip <= hi), None)

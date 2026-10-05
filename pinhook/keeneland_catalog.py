@@ -47,7 +47,7 @@ def extract_page(text, page, book, base_url=BASE):
     date = re.search(r'(?i)\bfoaled\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),\s*(20\d{2})\b', top)
     dob = f'{date.group(3)}-{MONTHS[date.group(1).title()]:02d}-{int(date.group(2)):02d}' if date else ''
     if not dob: reasons.append('foaling_date_missing')
-    sex_match = re.search(r'(?i)\b(filly|colt|gelding|mare|horse)\s*;\s*foaled\b',top)
+    sex_match = re.search(r'(?i)\b(filly|colt|gelding|mare|horse)\s*;?\s*foaled\b',top)
     sex = {'filly':'F','colt':'C','gelding':'G','mare':'M','horse':'H'}.get(sex_match.group(1).lower(),'') if sex_match else ''
     if not sex: reasons.append('sex_missing')
     by = next((i for i,x in enumerate(lines) if re.match(r'(?i)^By\s+\S',x)),len(lines))
@@ -66,7 +66,7 @@ def extract_page(text, page, book, base_url=BASE):
         following = top[cons.end():].splitlines()
         before_sex = []
         for line in following:
-            if re.search(r'(?i)\b(filly|colt|gelding|mare|horse)\s*;\s*foaled\b',line): break
+            if re.search(r'(?i)\b(filly|colt|gelding|mare|horse)\s*;?\s*foaled\b',line): break
             before_sex.append(line.strip())
         # Uppercase catalog names are usually the last line before the color/sex line.
         if before_sex and before_sex[-1].isupper(): name = before_sex[-1]

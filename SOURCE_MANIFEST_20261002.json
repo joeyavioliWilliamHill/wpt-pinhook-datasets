@@ -1,0 +1,43 @@
+[
+  {
+    "sale_code": "FTGULF21",
+    "official_page": "https://www.fasigtipton.com/2021/The-Gulfstream-Sale",
+    "feed_url": "https://www.fasigtipton.com/django/api/horses/?sale=180",
+    "raw_file": "raw/ft_gulfstream2021_horses.json",
+    "raw_sha256": "ef993ae73aa15cc9dde8819ae447c82ec280e017a32701400eb5065826f5c680",
+    "entries": 182,
+    "missing_catalog_hips": [
+      8,
+      62,
+      64,
+      162
+    ],
+    "status_counts": {
+      "OUT": 77,
+      "sold": 67,
+      "NOT SOLD": 38
+    },
+    "sold_gross_usd": 25360000.0,
+    "note": "Published feed records only; absent hips not inferred as outs. tjc_ref_num preserved in raw JSON; not asserted to be registration number."
+  },
+  {
+    "sale_code": "FTGULF22",
+    "official_page": "https://www.fasigtipton.com/2022/The-Gulfstream-Sale",
+    "feed_url": "https://www.fasigtipton.com/django/api/horses/?sale=197",
+    "raw_file": "raw/ft_gulfstream2022_horses.json",
+    "raw_sha256": "9e314fd8fbfc826053ab7d7967004db3f9fecff302c49123049da9008899ebfe",
+    "entries": 100,
+    "missing_catalog_hips": [
+      1,
+      42,
+      73
+    ],
+    "status_counts": {
+      "OUT": 48,
+      "NOT SOLD": 17,
+      "sold": 35
+    },
+    "sold_gross_usd": 13155000.0,
+    "note": "Published feed records only; absent hips not inferred as outs. tjc_ref_num preserved in raw JSON; not asserted to be registration number."
+  }
+]

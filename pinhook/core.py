@@ -43,6 +43,10 @@ def status(v,amount='',out=False,rna=False):
     if x in {'sold','post sale'.replace(' ','')} or (amount and not x): return 'sold'
     if x in {'enterednotsold','notsold'}: return 'entered_not_sold'
     return 'unknown'
+def raw_or_json(path: str | Path) -> Path:
+    """The original export if present, else its .json feed twin saved by pinhook.acquire."""
+    path=Path(path);twin=path.with_suffix('.json')
+    return twin if not path.exists() and twin.exists() else path
 def sha(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def write_csv(path,rows,fields):
     Path(path).parent.mkdir(parents=True,exist_ok=True)

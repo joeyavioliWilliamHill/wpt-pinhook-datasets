@@ -75,9 +75,11 @@ def normalize(path, sale):
     raw = Path(path).read_bytes()
     digest = hashlib.sha256(raw).hexdigest()
     values, convert_date = _read_sheet(raw, Path(path).suffix)
-    header = next((i for i in range(min(10, len(values))) if values[i][0] == 'Hip'), None)
-    expected = ['Hip', 'Name', 'Color', 'Sex', 'Foal Date', 'Sire', 'Dam', 'Damsire']
-    if header is None or values[header][:8] != expected:
+    # 2020-2022 workbooks label the same columns 'hip#' and 'Dam Sire'.
+    label = lambda v: str(v).lower().replace(' ', '').rstrip('#')
+    header = next((i for i in range(min(10, len(values))) if label(values[i][0]) == 'hip'), None)
+    expected = ['hip', 'name', 'color', 'sex', 'foaldate', 'sire', 'dam', 'damsire']
+    if header is None or [label(v) for v in values[header][:8]] != expected:
         raise ValueError('Unexpected archived OBS workbook layout')
     out, excluded = [], []
     for line in range(header + 1, len(values)):
@@ -85,10 +87,11 @@ def normalize(path, sale):
         if not isinstance(r[0], (int, float)) or r[0] != int(r[0]) or r[0] < 1:
             continue
         hip = int(r[0])
-        if not r[5] or not r[6] or (sale == 'june23' and (1018 <= hip <= 1029 or hip == 1084)) \
+        # Withdrawn hips may be placeholder rows of '.'.
+        if not str(r[5] or '').strip('. ') or not str(r[6] or '').strip('. ') or (sale == 'june23' and (1018 <= hip <= 1029 or hip == 1084)) \
            or (sale == 'june22' and hip >= 1151) \
            or (sale == 'june21' and 860 <= hip <= 879) \
-           or (sale == 'july20' and 993 <= hip <= 1005):
+           or (sale == 'july20' and 991 <= hip <= 1005):
             excluded.append(hip)
             continue
         day = next((d for lo, hi, d in sessions if lo <= hip <= hi), None)

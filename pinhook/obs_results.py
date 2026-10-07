@@ -1,11 +1,18 @@
-"""Normalize official OBS results CSV exports for the 2025 juvenile sales."""
+"""Normalize official OBS results CSV exports for the 2024-2025 juvenile sales.
+
+A .json path is read as the site's feed
+https://obssales.com/wp-json/obs-catalog-wp-plugin/v1/horse-sales/<id>, from which the
+browser builds that CSV; records are mapped to the CSV columns.
+"""
 from __future__ import annotations
 
 import argparse
 import csv
 import hashlib
+import json
 from collections import Counter
 from datetime import datetime
+from decimal import Decimal
 from pathlib import Path
 
 from .core import ENTRY_FIELDS, validate_entries, write_csv
@@ -23,11 +30,28 @@ SALES = {
 }
 
 
+FEED_COLUMNS = {'Hip Number': 'hip_number', 'Foaling Year': 'foaling_year', 'Foaling Date': 'foaling_date',
+                'Sex': 'sex', 'Sire Name': 'sire_name', 'Dam Name': 'dam_name', 'IN Out Status': 'in_out_status',
+                'Buyer Name': 'buyer_name', 'Horse Name': 'horse_name', 'Dam Sire': 'dam_sire',
+                'Property Line 1': 'property_line_1'}
+
+
+def from_feed(r: dict) -> dict[str, str]:
+    row = {column: r[key] or '' for column, key in FEED_COLUMNS.items()}
+    price = r['hammer_price']
+    row['Hammer Price'] = '' if price is None else format(Decimal(str(price)).normalize(), 'f')
+    return row
+
+
 def normalize(path, sale):
     code, sale_id, sessions = SALES[sale]
-    digest = hashlib.sha256(Path(path).read_bytes()).hexdigest()
-    with open(path, encoding='utf-8-sig', newline='') as f:
-        data = list(csv.DictReader(f))
+    raw = Path(path).read_bytes()
+    digest = hashlib.sha256(raw).hexdigest()
+    if Path(path).suffix == '.json':
+        data, source = [from_feed(r) for r in json.loads(raw)['sale_hip']], 'obs_results_json'
+    else:
+        with open(path, encoding='utf-8-sig', newline='') as f:
+            data, source = list(csv.DictReader(f)), 'obs_results_csv'
     required = {'Hip Number', 'Foaling Year', 'Foaling Date', 'Sex', 'Sire Name',
                 'Dam Name', 'IN Out Status', 'Buyer Name', 'Hammer Price'}
     if not data or not required.issubset(data[0]):
@@ -59,7 +83,7 @@ def normalize(path, sale):
             day = ['2025-03-11', '2025-03-12', '2025-03-13'][(hip - 1) // 272]
         if not day:
             raise ValueError(f'line {line}, hip {hip}: no sale session')
-        out.append(dict(source='obs_results_csv', sale_code=code, sale_year=day[:4], sale_type='juvenile',
+        out.append(dict(source=source, sale_code=code, sale_year=day[:4], sale_type='juvenile',
             hip=str(hip), source_entry_id=f'{code}:{hip}',
             source_url=f'https://obssales.com/catalog/#/{sale_id}/results',
             registry='', registration_number='', foaling_date=dob, foaling_year=r['Foaling Year'],

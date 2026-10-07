@@ -29,6 +29,17 @@ The original snapshot covers five 2022–2024 yearling sales per year and four 2
 
 Match candidates are provisional. Repeated juvenile entries are retained. RNA bids are separate from sold proceeds; missing matches mean no entry identified within covered sales. No return is assigned to RNA, out, or unknown outcomes.
 
+## Getting the inputs
+
+```bash
+.venv/bin/python -m pinhook.acquire              # all results into raw/, then work/*_full.csv for 2022-2025
+.venv/bin/python -m pinhook.acquire --catalogs   # also Keeneland 2019-2024 books and the 2025 F-T catalog (~300 MB)
+```
+
+Every raw input is downloaded from the sale company: Keeneland results CSVs, OBS 2020-2023 result workbooks, and the public JSON feeds behind the Fasig-Tipton and 2024-2025 OBS results pages. Those two sites build their CSV in the browser, so the feed is saved as `<name>.json` next to the expected CSV name; the parsers map it to the same entries, and a hand-downloaded CSV takes precedence. Existing files are never overwritten. `raw/fetch_log.json` records URL, sha256, row count, fetch time, and agreement with `SOURCE_MANIFEST.json`.
+
+What cannot be reproduced: the exact historical bytes of the browser-generated CSVs (the feeds are live, so later corrections show up; 6 of 15 Fasig-Tipton 2022-2025 sales and Keeneland 2024 now differ slightly from the snapshot), and the 2021 partial-cohort state assumed by `expand_obs_history`, since a fresh 2021 import already includes OBS 2022.
+
 ## Common commands
 
 ```bash
@@ -36,6 +47,7 @@ Match candidates are provisional. Repeated juvenile entries are retained. RNA bi
 .venv/bin/python -m pinhook.import_2019 --raw-dir raw --work-dir work
 .venv/bin/python -m pinhook.import_2020 --raw-dir raw --work-dir work
 .venv/bin/python -m pinhook.import_2021 --raw-dir raw --work-dir work --allow-partial
+.venv/bin/python -m pinhook.expand_obs_history --raw-dir raw --work-dir work
 .venv/bin/python explore_dataset.py --sale FTJUL22 --hip 8
 ```
 

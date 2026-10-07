@@ -11,7 +11,7 @@ from collections import Counter
 from pathlib import Path
 
 from .build_cohort_year import generate
-from .core import ENTRY_FIELDS, write_csv
+from .core import ENTRY_FIELDS, raw_or_json, write_csv
 from .fasig_results import normalize as fasig
 from .keeneland_results import normalize as keeneland
 
@@ -30,7 +30,7 @@ def import_files(raw_dir='raw', work_dir='work'):
     work_dir.mkdir(parents=True, exist_ok=True)
     manifest = []
     for filename, output, code, sale_type, url, parser in SOURCES:
-        path = raw_dir / filename
+        path = raw_or_json(raw_dir / filename)
         if not path.is_file():
             raise FileNotFoundError(f'{path} required for {code}: {url}')
         rows = keeneland(path, sale_year=2020) if parser == 'keeneland' else fasig(path, code, sale_type, url)

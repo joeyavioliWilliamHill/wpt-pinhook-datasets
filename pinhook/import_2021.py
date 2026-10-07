@@ -12,7 +12,7 @@ from collections import Counter
 from pathlib import Path
 
 from .build_cohort_year import generate
-from .core import ENTRY_FIELDS, write_csv
+from .core import ENTRY_FIELDS, raw_or_json, write_csv
 from .fasig_results import normalize as fasig
 from .keeneland_results import normalize as keeneland
 from .obs_legacy_excel import normalize as obs
@@ -37,7 +37,7 @@ def import_files(raw_dir, work_dir, allow_partial=False):
     missing = []
     manifest = []
     for filename, output, code, sale_type, url, parser in SOURCES:
-        path = raw_dir / filename
+        path = raw_or_json(raw_dir / filename)
         if not path.is_file():
             missing.append(dict(filename=filename, url=url))
             continue
@@ -53,15 +53,15 @@ def import_files(raw_dir, work_dir, allow_partial=False):
         print(f'{code}: {len(rows)} entries -> {work_dir / output}')
     (work_dir / 'cohort_2021_source_manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
     if missing:
-        print('\nStill needed (download from the official page, then rename exactly):')
+        print('\nStill needed (run python -m pinhook.acquire, or download from the official page and rename exactly):')
         for item in missing: print(f"  {item['filename']} <- {item['url']}")
         if not allow_partial:
             print('No partial cohort was built.')
             return False
     ys = [work_dir / output for filename, output, _, kind, _, _ in SOURCES
-          if kind == 'yearling' and (raw_dir / filename).is_file()]
+          if kind == 'yearling' and raw_or_json(raw_dir / filename).is_file()]
     js = [work_dir / output for filename, output, _, kind, _, _ in SOURCES
-          if kind == 'juvenile' and (raw_dir / filename).is_file()]
+          if kind == 'juvenile' and raw_or_json(raw_dir / filename).is_file()]
     if not ys or not js:
         print('Both sale sides are required to build a cohort.')
         return False

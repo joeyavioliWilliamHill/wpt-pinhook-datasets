@@ -1,6 +1,8 @@
 """Normalize official 2025 Fasig-Tipton Midlantic May Results Excel/CSV export.
 
 The site's 'Excel File' currently downloads CSV with three extra unnamed columns.
+The same records come from the public feed .../django/api/horses/?sale=<id>; a .json path
+is read as that feed and mapped to the CSV columns so both give identical entries.
 YEAR OF BIRTH is an exact foaling date. NOT SOLD's PRICE is a bid, not sale proceeds.
 """
 from __future__ import annotations
@@ -8,8 +10,10 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import json
 from collections import Counter
 from datetime import datetime
+from decimal import Decimal
 from pathlib import Path
 
 from .core import ENTRY_FIELDS, validate_entries, write_csv
@@ -17,10 +21,24 @@ from .core import ENTRY_FIELDS, validate_entries, write_csv
 SOURCE_URL='https://fasigtipton.com/index.php/2025/Midlantic-2YO-Sale?section=7757'
 
 
+def from_feed(r: dict) -> dict[str, str]:
+    # The site's export drops commas from and uppercases every text value, writes it unquoted,
+    # so a reader then strips quotes around a value; mirror both.
+    text=lambda key:next(csv.reader([r[key].replace(',','').upper()]))[0] if r[key] else ''
+    return {'SESSION':text('session'),'HIP':str(r['hip']),'SEX':text('sex'),'SIRE':text('sire'),'DAM':text('dam'),
+            'YEAR OF BIRTH':text('year_of_birth'),'PURCHASER':text('purchaser'),
+            'PRICE':format(Decimal(r['price']).normalize(),'f'),
+            'SIRE OF DAM':text('sire_of_dam'),'PROPERTY LINE':text('property_line')}
+
+
 def normalize(path, sale_code='FTMMAY25', sale_type='juvenile', source_url=SOURCE_URL):
-    digest=hashlib.sha256(Path(path).read_bytes()).hexdigest()
-    with open(path,encoding='utf-8-sig',newline='') as f:
-        data=list(csv.DictReader(f))
+    raw=Path(path).read_bytes()
+    digest=hashlib.sha256(raw).hexdigest()
+    if Path(path).suffix=='.json':
+        data,source=[from_feed(r) for r in json.loads(raw)],'fasig_tipton_public_results_json'
+    else:
+        with open(path,encoding='utf-8-sig',newline='') as f:
+            data,source=list(csv.DictReader(f)),'fasig_tipton_results_csv'
     required={'SESSION','HIP','SEX','SIRE','DAM','YEAR OF BIRTH','PURCHASER','PRICE'}
     if not data or not required.issubset(data[0]):
         raise ValueError(f'Not the Fasig-Tipton results export; missing {sorted(required-set(data[0] if data else []))}')
@@ -35,7 +53,7 @@ def normalize(path, sale_code='FTMMAY25', sale_type='juvenile', source_url=SOURC
         elif purchaser=='NOT SOLD' and int(amount)>0: state,price,bid,buyer='rna','',amount,''
         elif purchaser not in ('OUT','NOT SOLD') and int(amount)>0: state,price,bid,buyer='sold',f'{int(amount):.2f}','','' if purchaser=='---' else purchaser
         else: raise ValueError(f'line {line}, hip {hip}: unknown result {purchaser!r}, {amount!r}')
-        out.append(dict(source='fasig_tipton_results_csv',sale_code=sale_code,sale_year=r['SESSION'][:4],sale_type=sale_type,
+        out.append(dict(source=source,sale_code=sale_code,sale_year=r['SESSION'][:4],sale_type=sale_type,
             hip=hip,source_entry_id=f'{sale_code}:{hip}',source_url=source_url+'#/details/'+hip,
             registry='',registration_number='',foaling_date=dob,foaling_year=dob[:4],sex=r['SEX'].strip(),
             name='',sire=r['SIRE'].strip(),dam=r['DAM'].strip(),broodmare_sire=r.get('SIRE OF DAM','').strip(),

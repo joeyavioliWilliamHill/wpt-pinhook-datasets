@@ -1,0 +1,42 @@
+{
+  "books": [
+    {
+      "book": "Book1.pdf",
+      "sha256": "228c8701da07ade0617af9b4b29ceddcbd61ee1c904a37fdb334bb4ff356b341",
+      "pages": 403,
+      "accepted": 343
+    },
+    {
+      "book": "Book2.pdf",
+      "sha256": "d923d90911e46059fd1b072d93383f761351dbf6928cfb6ead8060d45fdedd9e",
+      "pages": 833,
+      "accepted": 700
+    },
+    {
+      "book": "Book3.pdf",
+      "sha256": "6d42fe60622e2aa8f67555f2ca592622547f3705b281fb6501e55f7bb37f6711",
+      "pages": 928,
+      "accepted": 778
+    },
+    {
+      "book": "Book4.pdf",
+      "sha256": "dda3c797e37c6309973a88dc7ece4fcb396ec17ff1bdc79ed7a1051eb8eec404",
+      "pages": 930,
+      "accepted": 778
+    },
+    {
+      "book": "Book5.pdf",
+      "sha256": "80648a19872e2d93e364d8522c4771e63fef900a8e83ecf979138cb9392ad072",
+      "pages": 918,
+      "accepted": 770
+    },
+    {
+      "book": "Book6.pdf",
+      "sha256": "b85949556d6df6b22c611033146a78f3f640278b6c0d841724cd1779f1e8410d",
+      "pages": 875,
+      "accepted": 716
+    }
+  ],
+  "accepted": 4085,
+  "review": 531
+}

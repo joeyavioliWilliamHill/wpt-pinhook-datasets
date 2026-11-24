@@ -1,0 +1,6 @@
+cohort,sale_code,entries,sold_purchases,purchases_with_candidate,candidate_pairs,exact_dob_pairs,sold_juvenile_candidates,rna_juvenile_candidates,out_juvenile_candidates,no_entry_in_covered_sales
+2022_to_2023,FTJUL22,298,189,97,194,194,69,11,17,92
+2022_to_2023,FTKYOCT22,1594,1100,380,636,636,275,40,65,720
+2022_to_2023,FTNYB22,280,188,91,167,167,68,5,18,97
+2022_to_2023,FTSAR22,214,143,25,64,64,14,3,8,118
+2022_to_2023,KEESEP22,4153,2965,871,1565,0,591,112,168,2094

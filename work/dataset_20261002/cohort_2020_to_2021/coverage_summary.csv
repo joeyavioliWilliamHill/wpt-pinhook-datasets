@@ -1,0 +1,5 @@
+cohort,sale_code,entries,sold_purchases,purchases_with_candidate,candidate_pairs,exact_dob_pairs,sold_juvenile_candidates,rna_juvenile_candidates,out_juvenile_candidates,no_entry_in_covered_sales
+2020_to_2021,FTKYOCT20,1549,961,95,148,148,58,6,31,866
+2020_to_2021,FTMIDFALL20,573,379,57,74,74,44,7,6,322
+2020_to_2021,FTSHOW20,657,348,57,118,118,36,8,13,291
+2020_to_2021,KEESEP20,4272,2481,165,351,0,87,19,59,2316

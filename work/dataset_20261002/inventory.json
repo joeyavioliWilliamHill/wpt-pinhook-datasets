@@ -1,0 +1,75 @@
+{
+  "as_of": "2026-10-02",
+  "cohorts": [
+    {
+      "cohort": "2019_to_2020",
+      "purchase_rows": 2974,
+      "candidate_purchases": 120,
+      "sold_candidates": 59,
+      "rna_candidates": 16,
+      "out_candidates": 45,
+      "no_entry_identified": 2854,
+      "covered_juvenile_sales": "FTMMAY20"
+    },
+    {
+      "cohort": "2020_to_2021",
+      "purchase_rows": 4169,
+      "candidate_purchases": 374,
+      "sold_candidates": 225,
+      "rna_candidates": 40,
+      "out_candidates": 109,
+      "no_entry_identified": 3795,
+      "covered_juvenile_sales": "FTGULF21|FTMMAY21"
+    },
+    {
+      "cohort": "2021_to_2022",
+      "purchase_rows": 4488,
+      "candidate_purchases": 376,
+      "sold_candidates": 226,
+      "rna_candidates": 57,
+      "out_candidates": 93,
+      "no_entry_identified": 4112,
+      "covered_juvenile_sales": "FTGULF22|FTMMAY22"
+    },
+    {
+      "cohort": "2022_to_2023",
+      "purchase_rows": 4585,
+      "candidate_purchases": 1464,
+      "sold_candidates": 1017,
+      "rna_candidates": 171,
+      "out_candidates": 276,
+      "no_entry_identified": 3121,
+      "covered_juvenile_sales": "FTMMAY23|OBSJUN23|OBSMAR23|OBSSPR23"
+    },
+    {
+      "cohort": "2023_to_2024",
+      "purchase_rows": 4532,
+      "candidate_purchases": 1400,
+      "sold_candidates": 949,
+      "rna_candidates": 185,
+      "out_candidates": 266,
+      "no_entry_identified": 3132,
+      "covered_juvenile_sales": "FTMMAY24|OBSJUN24|OBSMAR24|OBSSPR24"
+    },
+    {
+      "cohort": "2024_to_2025",
+      "purchase_rows": 4514,
+      "candidate_purchases": 1292,
+      "sold_candidates": 907,
+      "rna_candidates": 143,
+      "out_candidates": 242,
+      "no_entry_identified": 3222,
+      "covered_juvenile_sales": "FTMMAY25|OBSJUN25|OBSMAR25|OBSSPR25"
+    }
+  ],
+  "totals": {
+    "purchase_rows": 25262,
+    "candidate_purchases": 5026,
+    "sold_candidates": 3383,
+    "rna_candidates": 612,
+    "out_candidates": 1031,
+    "no_entry_identified": 20236
+  },
+  "identity_status": "provisional_review_required",
+  "unit": "purchase_transactions_not_unique_horses"
+}
